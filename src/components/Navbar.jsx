@@ -4,16 +4,21 @@ import { Link } from "react-router-dom"
 export default function Navigation() {
   return (
     <>
-      <Navbar bg="dark" variant="dark">
+      <Navbar bg="danger" variant="dark">
         <Container className="justify-content-start">
-          <Navbar.Brand>Dogstel</Navbar.Brand>
-          <Link to="/" className="text-white ms-3 text-decoration-none">
+           <Link to="/" className="text-white ms-3 text-decoration-none">
+            <Navbar.Brand>🏠</Navbar.Brand>
             Home
           </Link>
           <Link to="/contacto" className="text-white ms-3 text-decoration-none">
+            <Navbar.Brand>📔</Navbar.Brand>
             Contacto
           </Link>
+          <Navbar.Collapse className="justify-content-end">
+          <Navbar.Brand>Happy Cake 🍰</Navbar.Brand>
+        </Navbar.Collapse>
         </Container>
+
       </Navbar>
     </>
   );

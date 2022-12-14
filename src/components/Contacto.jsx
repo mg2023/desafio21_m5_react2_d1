@@ -1,27 +1,21 @@
-import { Accordion } from "react-bootstrap";
+// import { Accordion } from "react-bootstrap";
+import Form from 'react-bootstrap/Form';
+import InputGroup from 'react-bootstrap/InputGroup';
 
 export default function Navigation() {
   return (
-    <Accordion>
-      <Accordion.Item eventKey="0">
-        <Accordion.Header>Plan - Básico</Accordion.Header>
-        <Accordion.Body>
-          3 Noches por solo $20.000 CLP, habitación compartida
-        </Accordion.Body>
-      </Accordion.Item>
-      <Accordion.Item eventKey="1">
-        <Accordion.Header>Plan - Estándar </Accordion.Header>
-        <Accordion.Body>
-          5 Noches por solo $25.000 CLP, habitación privada
-        </Accordion.Body>
-      </Accordion.Item>
-      <Accordion.Item eventKey="2">
-        <Accordion.Header>Plan - Guauf</Accordion.Header>
-        <Accordion.Body>
-          7 Noches + Adiestramiento canino por solo $35.000 CLP, habitación
-          privada o compartida a elección
-        </Accordion.Body>
-      </Accordion.Item>
-    </Accordion>
+<form>
+  <div className="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Correo:</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="name@example.com" aria-describedby="emailHelp"/>
+   </div>
+
+   <Form.Label>Descripción:</Form.Label>
+   <InputGroup className="mb-3">
+       <Form.Control as="textarea" aria-label="With textarea" />
+    </InputGroup>
+
+  <button type="submit" className="btn btn-primary bg-danger" >Enviar</button>
+</form>
   );
 }
